@@ -8,19 +8,29 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-image: url('https://llf-ast.kz/images/WhatsApp_Image_2025-03-30_at_14.49.54_1.jpeg');
-      background-size: cover;
-      background-position: center;
+      background: url('https://llf-ast.kz/images/WhatsApp_Image_2025-03-30_at_14.49.54_1.jpeg') no-repeat center center fixed;
+      background-size: 50%; /* уменьшен в 2 раза */
+      background-color: #000; /* fallback цвет */
       color: white;
       text-align: center;
     }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7); /* затемнение */
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
     .content {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.8);
       padding: 30px;
-      margin: 50px auto;
       max-width: 600px;
       border-radius: 10px;
     }
+
     a.whatsapp-btn {
       display: inline-block;
       margin-top: 20px;
@@ -35,17 +45,19 @@
   </style>
 </head>
 <body>
-  <div class="content">
-    <h1>Арқалық қаласында футбол турнирі! ⚽</h1>
-    <p>Достар! Арқалық қаласында алғаш рет әуесқой футболшылар арасында турнир өтеді.</p>
-    <p><strong>📅 Өтетін күні:</strong> 25–26 Шілде<br>
-       <strong>📍 Өтетін орны:</strong> Арқалық<br>
-       <strong>💰 Жүлде қоры:</strong> 500 000 тг<br>
-       <strong>👥 Қатысушылар:</strong> 12 команда<br>
-       <strong>📌 Формат:</strong> 5x5</p>
-    <p>🎉 Бұл нағыз тартысты және қызықты дода болмақ!<br>
-       📝 Тіркелу басталып кетті! Командаңды көрсет!</p>
-    <a class="whatsapp-btn" href="https://wa.me/770711660306" target="_blank">📲 Тіркелу үшін WhatsApp</a>
+  <div class="overlay">
+    <div class="content">
+      <h1>Арқалық қаласында футбол турнирі! ⚽</h1>
+      <p>Достар! Арқалық қаласында алғаш рет әуесқой футболшылар арасында турнир өтеді.</p>
+      <p><strong>📅 Өтетін күні:</strong> 25–26 Шілде<br>
+         <strong>📍 Өтетін орны:</strong> Арқалық<br>
+         <strong>💰 Жүлде қоры:</strong> 500 000 тг<br>
+         <strong>👥 Қатысушылар:</strong> 12 команда<br>
+         <strong>📌 Формат:</strong> 5x5</p>
+      <p>🎉 Бұл нағыз тартысты және қызықты дода болмақ!<br>
+         📝 Тіркелу басталып кетті! Командаңды көрсет!</p>
+      <a class="whatsapp-btn" href="https://wa.me/770711660306" target="_blank">📲 Тіркелу үшін WhatsApp</a>
+    </div>
   </div>
 </body>
 </html>
