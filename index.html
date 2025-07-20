@@ -9,14 +9,13 @@
       padding: 0;
       font-family: Arial, sans-serif;
       background: url('https://llf-ast.kz/images/WhatsApp_Image_2025-03-30_at_14.49.54_1.jpeg') no-repeat center center fixed;
-      background-size: 50%; /* уменьшен в 2 раза */
-      background-color: #000; /* fallback цвет */
+      background-size: cover; /* растягивает без чёрных краёв */
       color: white;
       text-align: center;
     }
 
     .overlay {
-      background-color: rgba(0, 0, 0, 0.7); /* затемнение */
+      background-color: rgba(0, 0, 0, 0.6); /* лёгкое затемнение */
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -25,7 +24,7 @@
     }
 
     .content {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 30px;
       max-width: 600px;
       border-radius: 10px;
