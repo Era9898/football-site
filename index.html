@@ -2,122 +2,101 @@
 <html lang="kk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="IDQ CUP 2025 - Арқалық қаласында өтетін футбол турнирі. Жүлде қоры 250 000 ₸. Қатысып, чемпион бол!">
+  <meta name="keywords" content="футбол, турнир, Арқалық, IDQ CUP 2025, 7x7, әуесқой футбол, тіркелу, команда">
   <title>IDQ CUP 2025 - Арқалық</title>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/888/888879.png" />
-  <meta property="og:title" content="IDQ CUP 2025 - Арқалық футбол турнирі">
-  <meta property="og:description" content="Арқалық қаласында өтетін әуесқой футбол турнирі! Қатыс, жеңімпаз бол!">
-  <meta property="og:image" content="https://llf-ast.kz/images/WhatsApp_Image_2025-03-30_at_14.49.54_1.jpeg">
-  <meta property="og:type" content="website">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --main-color: #25D366;
-      --accent-color: #E1306C;
-      --dark-overlay: rgba(0, 0, 0, 0.7);
-      --highlight: red;
-    }
-
     body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                  url('https://llf-ast.kz/images/WhatsApp_Image_2025-03-30_at_14.49.54_1.jpeg') no-repeat center center / cover;
       color: white;
-      background: linear-gradient(var(--dark-overlay), var(--dark-overlay)), 
-        url('https://llf-ast.kz/images/WhatsApp_Image_2025-03-30_at_14.49.54_1.jpeg') no-repeat center center fixed;
-      background-size: cover;
+      text-shadow: 1px 1px 2px black;
     }
 
     .container {
-      max-width: 800px;
-      margin: 100px auto 40px auto;
-      padding: 30px 20px;
       text-align: center;
-      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 80px auto 40px auto;
       border-radius: 15px;
-      animation: fadeIn 1.5s ease;
+      background-color: rgba(0, 0, 0, 0.6);
+      animation: fadeIn 2s ease-in;
     }
 
     h1 {
-      font-size: 38px;
+      font-size: 42px;
       margin-bottom: 20px;
     }
 
     p {
-      font-size: 20px;
-      margin-bottom: 12px;
+      font-size: 22px;
+      margin-bottom: 16px;
     }
 
     .btn {
       display: inline-block;
-      margin: 10px 5px;
-      padding: 14px 24px;
-      font-size: 18px;
+      background-color: #25D366;
       color: white;
+      padding: 14px 22px;
+      margin: 10px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
       text-decoration: none;
-      border: none;
-      border-radius: 8px;
+      transition: background 0.3s;
       cursor: pointer;
-      transition: background 0.3s ease;
     }
 
-    .btn.whatsapp {
-      background-color: var(--main-color);
+    .btn:hover {
+      background-color: #1DA851;
     }
 
-    .btn.whatsapp:hover {
-      background-color: #1da851;
+    .instagram-btn {
+      background-color: #E1306C;
     }
 
-    .btn.instagram {
-      background-color: var(--accent-color);
-    }
-
-    .btn.instagram:hover {
-      background-color: #b02055;
-    }
-
-    .audio-toggle {
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      font-size: 28px;
-      background: rgba(0,0,0,0.5);
-      border: none;
-      color: white;
-      border-radius: 8px;
-      padding: 10px;
-      z-index: 1000;
-      cursor: pointer;
+    .instagram-btn:hover {
+      background-color: #c1225e;
     }
 
     .calendar {
       margin: 50px auto;
       text-align: center;
+      font-size: 20px;
     }
 
     .calendar table {
       width: 100%;
       max-width: 500px;
       margin: auto;
-      font-size: 18px;
-      border-spacing: 8px;
-    }
-
-    .calendar td, .calendar th {
-      padding: 10px;
       color: white;
     }
 
-    .highlight {
-      border: 3px solid var(--highlight);
-      border-radius: 50%;
-      background-color: rgba(255, 0, 0, 0.2);
+    .calendar th, .calendar td {
+      padding: 10px;
     }
 
-    .timer {
-      font-size: 24px;
-      margin-bottom: 20px;
-      font-weight: bold;
+    .highlight {
+      border: 3px solid red;
+      border-radius: 50%;
+      background-color: rgba(255,0,0,0.2);
+    }
+
+    .audio-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 26px;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 10px;
+      z-index: 1000;
     }
 
     @keyframes fadeIn {
@@ -127,43 +106,60 @@
 
     @media (max-width: 600px) {
       h1 { font-size: 28px; }
-      p { font-size: 16px; }
-      .btn { font-size: 16px; padding: 10px 18px; }
+      p { font-size: 18px; }
+      .btn { font-size: 16px; padding: 10px; }
+      input { width: 90% !important; }
     }
   </style>
 </head>
 <body>
 
-<!-- 🎵 Аудио -->
+<!-- 🎵 Музыка -->
 <audio id="bg-music" autoplay loop>
   <source src="https://files.catbox.moe/4dgan5.mp3" type="audio/mpeg">
   Сіздің браузеріңіз аудионы қолдамайды.
 </audio>
-<button class="audio-toggle" title="Музыка қосу/сөндіру">🔈</button>
 
-<!-- 🏟 Контент -->
+<!-- 🔊 Музыка батырмасы -->
+<button class="audio-toggle" id="audioBtn" aria-label="Музыка қосу немесе сөндіру">🔈</button>
+
+<!-- 📄 Контент -->
 <div class="container">
   <h1>Арқалық қаласында футбол турнирі! ⚽</h1>
-  <div class="timer" id="countdown">Таймер жүктелуде...</div>
-  <p>Достар! Арқалық қаласында алғаш рет әуесқой футболшылар арасында <strong>IDQ - CUP 2025</strong> турнирі өтеді. Барлық командаларды қатысуға шақырамыз! 💪</p>
+  <p>Достар! Арқалық қаласында алғаш рет әуесқой футболшылар арасында <strong>IDQ - CUP 2025</strong> турнирі өтеді. Біз барлық команда мүшелерін қатысуға шақырамыз! 💪</p>
   <p>📅 Өтетін күні: 25-26 Шілде</p>
   <p>📍 Өтетін орны: Жігер стадионы</p>
   <p>💰 Жүлде қоры: 250 000 теңге</p>
-  <p>👥 Қатысушы командалар саны: 8</p>
-  <p>📌 Формат: 7x7</p>
-  <p>🧍‍♂️ Әр командадан 10 ойыншыға дейін рұқсат</p>
-  <p>📞 Тіркелу үшін: 8771-166-0306</p>
-  <a class="btn whatsapp" href="https://wa.me/77711660306" target="_blank">WhatsApp арқылы жазу</a>
-  <a class="btn instagram" href="https://www.instagram.com/inter_dem_qazaqstan" target="_blank">Instagram парақшасы</a>
+  <p>👥 Қатысушы командалар саны: 8 команда</p>
+  <p>📌 Турнир форматы: 7х7</p>
+  <p>🎉 Бұл нағыз тартысты және қызықты дода болмақ!</p>
+  <p>📝 Тіркеу басталып кетті! Әр командадан 10 үздік ойыншы қосуға рұқсат!</p>
+
+  <!-- 📩 Тіркеу формасы -->
+  <form action="mailto:youremail@example.com" method="post" enctype="text/plain" style="margin-top: 20px;">
+    <input type="text" placeholder="Команда атауы" required style="padding: 10px; border-radius: 5px; width: 80%; max-width: 300px;"><br><br>
+    <input type="tel" placeholder="Байланыс нөмірі" required style="padding: 10px; border-radius: 5px; width: 80%; max-width: 300px;"><br><br>
+    <button class="btn whatsapp" type="submit">Тіркелу</button>
+  </form>
+
+  <!-- 📱 Батырмалар -->
+  <a class="btn" href="https://wa.me/77711660306" target="_blank">WhatsApp арқылы жазу</a>
+  <a class="btn instagram-btn" href="https://www.instagram.com/inter_dem_qazaqstan" target="_blank">Инстаграм парақшасы</a>
+
+  <!-- 📷 Instagram preview -->
+  <div style="margin-top: 20px;">
+    <p>Instagram парақша көрінісі:</p>
+    <a href="https://www.instagram.com/inter_dem_qazaqstan" target="_blank">
+      <img src="https://example.com/instagram-preview.jpg" alt="Instagram preview" style="max-width: 100%; border-radius: 10px; border: 2px solid white;">
+    </a>
+  </div>
 </div>
 
-<!-- 📅 Күнтізбе -->
+<!-- 📆 Күнтізбе -->
 <div class="calendar">
   <table>
     <tr><th colspan="7">Шілде 2025</th></tr>
-    <tr>
-      <th>Дс</th><th>Сс</th><th>Ср</th><th>Бс</th><th>Жм</th><th>Сб</th><th>Жс</th>
-    </tr>
+    <tr><th>Дс</th><th>Сс</th><th>Ср</th><th>Бс</th><th>Жм</th><th>Сб</th><th>Жс</th></tr>
     <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
     <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
     <tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
@@ -174,39 +170,18 @@
 
 <!-- 🧠 Скрипт -->
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const music = document.getElementById('bg-music');
-  const button = document.querySelector('.audio-toggle');
-  let playing = true;
+  document.addEventListener("DOMContentLoaded", () => {
+    const music = document.getElementById('bg-music');
+    const button = document.getElementById('audioBtn');
+    let playing = true;
 
-  button.addEventListener('click', () => {
-    if (!music) return;
-    playing ? music.pause() : music.play();
-    button.textContent = playing ? '🔇' : '🔈';
-    playing = !playing;
+    button.addEventListener('click', () => {
+      if (!music) return;
+      playing ? music.pause() : music.play();
+      button.textContent = playing ? '🔇' : '🔈';
+      playing = !playing;
+    });
   });
-
-  // Таймер
-  const countdown = document.getElementById("countdown");
-  const targetDate = new Date("2025-07-25T00:00:00").getTime();
-  const interval = setInterval(() => {
-    const now = new Date().getTime();
-    const diff = targetDate - now;
-
-    if (diff <= 0) {
-      countdown.textContent = "Турнир басталды!";
-      clearInterval(interval);
-      return;
-    }
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / 1000 / 60) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    countdown.textContent = `Турнирге дейін: ${days} күн ${hours} сағ ${minutes} мин ${seconds} сек`;
-  }, 1000);
-});
 </script>
 
 </body>
