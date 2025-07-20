@@ -135,6 +135,11 @@
   <p>🎉 Бұл нағыз тартысты және қызықты дода болмақ!</p>
   <p>📝 Тіркеу басталып кетті! Әр командадан 10 үздік ойыншы қосуға рұқсат!</p>
 
+  <!-- ⏳ Таймер -->
+  <div id="countdown" style="font-size: 28px; margin-top: 30px;">
+    ⏳ Турнир басталуына қалған уақыт: <span id="time">Жүктелуде...</span>
+  </div>
+
   <!-- 📩 Тіркеу формасы -->
   <form action="mailto:youremail@example.com" method="post" enctype="text/plain" style="margin-top: 20px;">
     <input type="text" placeholder="Команда атауы" required style="padding: 10px; border-radius: 5px; width: 80%; max-width: 300px;"><br><br>
@@ -182,6 +187,29 @@
       playing = !playing;
     });
   });
+
+  // Таймер
+  function updateCountdown() {
+    const eventDate = new Date("2025-07-25T09:00:00");
+    const now = new Date();
+    const diff = eventDate - now;
+
+    if (diff <= 0) {
+      document.getElementById("time").innerText = "Турнир басталды!";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("time").innerText =
+      `${days} күн, ${hours} сағат, ${minutes} минут, ${seconds} секунд`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
 </script>
 
 </body>
