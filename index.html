@@ -9,37 +9,49 @@
       padding: 0;
       font-family: Arial, sans-serif;
       background: url('https://llf-ast.kz/images/WhatsApp_Image_2025-03-30_at_14.49.54_1.jpeg') no-repeat center center fixed;
-      background-size: cover; /* растягивает без чёрных краёв */
+      background-size: cover;
       color: white;
       text-align: center;
     }
 
     .overlay {
-      background-color: rgba(0, 0, 0, 0.6); /* лёгкое затемнение */
+      background-color: rgba(0, 0, 0, 0.6);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 30px;
     }
 
     .content {
       background-color: rgba(0, 0, 0, 0.7);
-      padding: 30px;
-      max-width: 600px;
-      border-radius: 10px;
+      padding: 40px;
+      max-width: 700px;
+      border-radius: 12px;
+      font-size: 22px; /* Увеличен основной размер текста */
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-size: 32px; /* Заголовок больше */
+      margin-bottom: 20px;
     }
 
     a.whatsapp-btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
+      margin-top: 30px;
+      padding: 15px 30px;
       background-color: #25D366;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 22px; /* Кнопка крупнее */
+      transition: background-color 0.3s;
+    }
+
+    a.whatsapp-btn:hover {
+      background-color: #1ebe5d;
     }
   </style>
 </head>
